@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sviatlana Rudaya - CV</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header class="header">
+  <div class="container header-content">
+    <img src="img/avatar.jpg" alt="Sviatlana Rudaya photo" class="avatar">
+    <div>
+      <h1>Sviatlana Rudaya</h1>
+      <p>Full-Stack Developer</p>
+    </div>
+  </div>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="#contacts">Contacts</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#code">Code Example</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section id="contacts">
+    <h2>Contact Information</h2>
+    <ul class="list-unstyled">
+      <li>Email: svtpuzevich@gmail.com.com</li>
+      <li>GitHub: <a href="https://github.com/SviatlanaPuzevich">github.com/SviatlanaPuzevich</a></li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>Brief Self-Introduction</h2>
+    <p>
+      I am a motivated beginner Full-Stack Developer with a strong foundation in both front-end and back-end technologies.
+      I have experience building responsive user interfaces using HTML5, CSS3, JavaScript, and React, as well as developing
+      server-side applications with Java and Python. I am familiar with relational databases such as Oracle and PostgreSQL
+      and understand how to design and work with RESTful APIs.
+
+      I actively use Git and GitHub for version control and have experience working with Docker and CI/CD tools like GitHub Actions.
+      My goal is to continue improving my problem-solving skills, write clean and maintainable code, and grow into a confident
+      Full-Stack Engineer capable of delivering scalable and efficient web applications.
+    </p>
+
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5, CSS3</li>
+      <li>JavaScript (ES6+)</li>
+      <li>Java, Python</li>
+      <li>Oracle, Postgres</li>
+      <li>Docker</li>
+      <li>Git, GitHub</li>
+      <li>Graphql, Rest Api, SOAP</li>
+      <li>React, Redux, Nest.js</li>
+      <li>GitHub Actions, GitLab</li>
+    </ul>
+  </section>
+
+  <section id="code">
+    <h2>Code Example</h2>
+    <p>Leetcode task: Submissions Detail -
+      Fix Names in a Table.</p>
+    <pre><code>
+import pandas as pd
+
+def fix_names(users: pd.DataFrame) -> pd.DataFrame:
+    users["name"] = users["name"].str[:1].str.upper() + users["name"].str[1:].str.lower()
+    return users[["user_id", "name"]].sort_values(by=["user_id"])
+      </code></pre>
+    <p>Leetcode task: Memoize</p>
+    <pre><code>
+type Fn = (...params: number[]) => number
+
+function memoize(fn: Fn): Fn {
+    let map: Map<string, number> = new Map();
+
+    return function (...args) {
+        const key = args.join(',');
+        if (map.has(key)) {
+            return map.get(key)
+        } else {
+            const val = fn(...args);
+            map.set(key, val);
+            return val;
+        }
+
+    }
+}
+
+      </code></pre>
+  </section>
+
+  <section id="projects">
+    <h2>Work Experience / Projects</h2>
+    <ul>
+      <li>
+        <strong>Per Project</strong> –
+        <a href="https://github.com/SviatlanaPuzevich/react-restaurant">GitHub Repository</a><br>
+        Technologies used: HTML, CSS, Git, React, Next
+      </li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Bachelor's Degree in Computer Science(BSUIR 2013) </li>
+      <li>RS School – JavaScript/Front-end Course</li>
+
+    </ul>
+
+    <h2>Languages</h2>
+    <p>English B2</p>
+    <p>Russian native</p>
+    <p>Lithuanian A2</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <p>© 2026 <a href="https://github.com/SviatlanaPuzevich">Sviatlana Rudaya</a></p>
+    <a href="https://rs.school/courses/short-track">
+      <img src="img/rs-school-logo.svg" alt="RS School logo" class="rs-logo">
+    </a>
+  </div>
+</footer>
+</body>
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</html>
